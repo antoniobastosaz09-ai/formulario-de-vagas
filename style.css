@@ -1,0 +1,313 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cabecalho {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navegacao {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #123b72;
+}
+
+.logo span {
+    color: #2878e5;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #475569;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #2878e5;
+}
+
+/* Banner principal */
+.hero {
+    background: linear-gradient(120deg, #102f5e, #2878e5);
+    color: #ffffff;
+    padding: 90px 0;
+}
+
+.hero-conteudo {
+    max-width: 1200px;
+}
+
+.etiqueta {
+    color: #2878e5;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero .etiqueta {
+    color: #c7e0ff;
+}
+
+.hero h1 {
+    max-width: 750px;
+    margin: 18px 0;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #a9d0ff;
+}
+
+.hero p {
+    max-width: 620px;
+    color: #e2ecfa;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+/* Botões */
+.botao-principal {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 22px;
+    background: #2878e5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.hero .botao-principal {
+    background: #ffffff;
+    color: #123b72;
+}
+
+.botao-principal:hover {
+    background: #165fc0;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Seções */
+.secao {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.titulo-secao {
+    margin-bottom: 30px;
+}
+
+.titulo-secao h2 {
+    margin: 8px 0;
+    font-size: 30px;
+    color: #123b72;
+}
+
+.titulo-secao p {
+    color: #64748b;
+}
+
+/* Formulário */
+#formulario-vaga {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(15, 45, 85, 0.05);
+}
+
+.grade-formulario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 25px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1e293b;
+    font: inherit;
+    font-size: 14px;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2878e5;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+#mensagem {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tabela de vagas */
+.secao-vagas {
+    background: #eef3f9;
+}
+
+.resumo-vagas {
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+.tabela-container {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #123b72;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+    font-size: 13px;
+}
+
+tbody tr:hover {
+    background: #f8fbff;
+}
+
+.vazio {
+    text-align: center;
+    padding: 30px;
+    color: #64748b;
+}
+
+.botao-excluir {
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+.botao-excluir:hover {
+    background: #b42332;
+}
+
+footer {
+    background: #102f5e;
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .navegacao {
+        padding: 18px 0;
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .grade-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+
+    #formulario-vaga {
+        padding: 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 25px;
+    }
+}

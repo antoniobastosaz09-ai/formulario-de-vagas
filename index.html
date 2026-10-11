@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VagasJá | Oportunidades de Emprego</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container navegacao">
+            <a href="#" class="logo">Vagas<span>Já</span></a>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#cadastro">Divulgar vaga</a>
+                <a href="#vagas">Vagas disponíveis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-conteudo">
+                <span class="etiqueta">SUA PRÓXIMA OPORTUNIDADE</span>
+                <h1>Conectando talentos às melhores <span>oportunidades.</span></h1>
+                <p>
+                    Cadastre vagas, divulgue oportunidades e ajude
+                    profissionais a encontrarem seu próximo emprego.
+                </p>
+                <a href="#cadastro" class="botao-principal">
+                    Divulgar uma vaga
+                </a>
+            </div>
+        </section>
+
+        <section class="secao container" id="cadastro">
+            <div class="titulo-secao">
+                <span class="etiqueta">PARA EMPRESAS</span>
+                <h2>Divulgue uma oportunidade</h2>
+                <p>Preencha os dados abaixo para cadastrar uma nova vaga.</p>
+            </div>
+
+            <form id="formulario-vaga">
+                <div class="grade-formulario">
+                    <div class="campo">
+                        <label for="empresa">Nome da empresa *</label>
+                        <input type="text" id="empresa"
+                            placeholder="Ex.: Empresa ABC" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="titulo">Nome da vaga *</label>
+                        <input type="text" id="titulo"
+                            placeholder="Ex.: Desenvolvedor Web" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="area">Área profissional *</label>
+                        <select id="area" required>
+                            <option value="">Selecione uma área</option>
+                            <option>Tecnologia</option>
+                            <option>Administração</option>
+                            <option>Vendas</option>
+                            <option>Marketing</option>
+                            <option>Recursos Humanos</option>
+                            <option>Educação</option>
+                            <option>Saúde</option>
+                            <option>Engenharia</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contrato">Tipo de contrato *</label>
+                        <select id="contrato" required>
+                            <option value="">Selecione o contrato</option>
+                            <option>CLT</option>
+                            <option>Estágio</option>
+                            <option>Jovem Aprendiz</option>
+                            <option>PJ</option>
+                            <option>Temporário</option>
+                            <option>Freelancer</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="local">Localização *</label>
+                        <input type="text" id="local"
+                            placeholder="Ex.: Fortaleza - CE ou Remoto" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="salario">Salário (R$)</label>
+                        <input type="number" id="salario"
+                            placeholder="Ex.: 2500" min="0" step="0.01">
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="descricao">Descrição da vaga *</label>
+                        <textarea id="descricao" rows="4"
+                            placeholder="Informe as atividades e os requisitos..."
+                            required></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="botao-principal">
+                    Cadastrar vaga
+                </button>
+                <p id="mensagem" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="secao secao-vagas" id="vagas">
+            <div class="container">
+                <div class="titulo-secao">
+                    <span class="etiqueta">OPORTUNIDADES</span>
+                    <h2>Vagas divulgadas</h2>
+                    <p>Confira as oportunidades cadastradas no site.</p>
+                </div>
+
+                <div class="resumo-vagas">
+                    Total de vagas: <strong id="total-vagas">0</strong>
+                </div>
+
+                <div class="tabela-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Empresa</th>
+                                <th>Vaga</th>
+                                <th>Área</th>
+                                <th>Contrato</th>
+                                <th>Localização</th>
+                                <th>Salário</th>
+                                <th>Descrição</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="lista-vagas">
+                            <tr id="linha-vazia">
+                                <td colspan="8" class="vazio">
+                                    Nenhuma vaga cadastrada ainda.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 VagasJá — Conectando pessoas e oportunidades.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
